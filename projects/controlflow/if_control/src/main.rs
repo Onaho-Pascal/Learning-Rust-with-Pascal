@@ -7,14 +7,10 @@ fn main() {
     io::stdin().read_line(&mut dna_base).expect("The input was invalid");
     let dna_base: char = dna_base.trim().chars().next().expect("The input was invalid at this stage");
 
-    if dna_base == 'A' {
-        println!("Adenine");
-    } else if dna_base == 'G' {
-        println!("Guanine");
-    } else if dna_base == 'T' {
-        println!("Thymine");
-    } else if dna_base == 'C' {
-        println!("Cytosine");
+    if dna_base == 'A' || dna_base == 'G'{
+        println!("Purine Base");
+    } else if dna_base == 'T' || dna_base == 'C' {
+        println!("Pyrimidine");
     } else {
         println!("Not a nitrogenous base");
     }
