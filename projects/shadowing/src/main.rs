@@ -4,3 +4,4 @@ fn main() {
     let x: f32 = 25.5;
     println!("The shadowed variable is {}", x);
 }
+
