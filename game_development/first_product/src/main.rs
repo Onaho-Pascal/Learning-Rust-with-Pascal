@@ -3,8 +3,8 @@ use macroquad::prelude::*;
 #[macroquad::main("Nitro Base")]
 
 async fn main() {
-    let mut x = screen_width() / 2.0;
-    let mut y = screen_height() / 2.0;
+    let mut x = screen_width() / 5.0;
+    let mut y = screen_height() / 5.0;
     loop {
         clear_background(DARKBLUE);
         if is_key_down(KeyCode::Right) {
