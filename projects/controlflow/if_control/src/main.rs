@@ -15,6 +15,19 @@ fn main() {
         println!("Not a nitrogenous base");
     }
 
+    match dna_base {
+        'A' => println!("Adenine"),
+        'T' => println!("Thymine"),
+        'C' => println!("Cytosine"),
+        'G' => println!("Guanine"),
+         _ => println!("Not a valid base"),
+    }
+
+    match dna_base {
+        'A' | 'T' | 'C' | 'G' => println!("Valid base"),
+        _ => println!("Not a valid nitrogenous base"),
+    }
+
     let a: [i32; 5] = [1, 2, 3, 4, 5];
 
     println!("Input an array index of your choice:");
