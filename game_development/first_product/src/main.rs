@@ -7,10 +7,21 @@ async fn main() {
     let delta_time = get_frame_time();
     let mut x = screen_width() / 2.0;
     let mut y = screen_height() / 2.0;
-    x = clamp(x, 0.0, screen_width);
-    y = clamp(y, 0.0, screen_height);
+    
     loop {
         clear_background(RED);
+        if is_key_down(KeyCode::D) {
+            x += MOVEMENT_SPEED * delta_time;
+        }
+        if is_key_down(KeyCode::A) {
+            x -= MOVEMENT_SPEED * delta_time;
+        }
+        if is_key_down(KeyCode::S) {
+            y += MOVEMENT_SPEED * delta_time;
+        }
+        if is_key_down(KeyCode::W) {
+            y -= MOVEMENT_SPEED * delta_time;
+        }
         if is_key_down(KeyCode::Right) {
             x += MOVEMENT_SPEED * delta_time;
         }
@@ -23,6 +34,8 @@ async fn main() {
         if is_key_down(KeyCode::Up) {
             y -= MOVEMENT_SPEED * delta_time;
         }
+        x = clamp(x, 0.0, screen_width());
+        y = clamp(y, 0.0, screen_height());
 
         draw_circle(x, y, 16.0, WHITE);
         next_frame().await
