@@ -31,28 +31,28 @@ async fn main() {
 
          let delta_time = get_frame_time();
         if is_key_down(KeyCode::D) {
-            circle.x += MOVEMENT_SPEED * delta_time;
+            circle.x += circle.speed * delta_time;
         }
         if is_key_down(KeyCode::A) {
-            circle.x -= MOVEMENT_SPEED * delta_time;
+            circle.x -= circle.speed * delta_time;
         }
         if is_key_down(KeyCode::S) {
-            circle.y += MOVEMENT_SPEED * delta_time;
+            circle.y += circle.speed * delta_time;
         }
         if is_key_down(KeyCode::W) {
-            circle.y -= MOVEMENT_SPEED * delta_time;
+            circle.y -= circle.speed * delta_time;
         }
         if is_key_down(KeyCode::Right) {
-            circle.x += MOVEMENT_SPEED * delta_time;
+            circle.x += circle.speed * delta_time;
         }
         if is_key_down(KeyCode::Left) {
-            circle.x -= MOVEMENT_SPEED * delta_time;
+            circle.x -= circle.speed * delta_time;
         }
         if is_key_down(KeyCode::Down) {
-            circle.y += MOVEMENT_SPEED * delta_time;
+            circle.y += circle.speed * delta_time;
         }
         if is_key_down(KeyCode::Up) {
-            circle.y -= MOVEMENT_SPEED * delta_time;
+            circle.y -= circle.speed * delta_time;
         }
         circle.x = clamp(circle.x, 0.0, screen_width());
         circle.y = clamp(circle.y, 0.0, screen_height());
