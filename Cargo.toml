@@ -1,6 +1,0 @@
-[workspace]
-members = [
-    "game_development/*",
-
-]
-resolver = "2"
