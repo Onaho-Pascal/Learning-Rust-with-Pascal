@@ -5,11 +5,27 @@ struct Rectangle {
     height: f64,
 }
 
+struct Dog {
+    name: String,
+    age: u8,
+}
+
+impl Dog {
+    fn bark(&self) {
+        println!("Say woof!, {}", self.name);
+    }
+}
+
 
 
 fn main() {
     
-    
+    let caesar = Dog {name: String::from("Rex"), age: 10};
+
+    rex.bark(); 
+
+
+
     println!("Input the value for the width:");
     let mut w = String::new();
 
